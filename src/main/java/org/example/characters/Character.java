@@ -14,7 +14,7 @@ public class Character extends Person {
 
     @Override
     public void printInfo() {
-
+        System.out.println("I'm " + super.gender + " my name is " + super.name + ". I'm " + house);
     }
 
     public String getRole() {

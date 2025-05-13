@@ -4,19 +4,17 @@ import org.example.interfaces.Actions;
 
 public class Character extends Person implements Actions {
     private String role;
-    private Home house;
     private boolean isAlive;
 
-    public Character(String name, String role, String gender, Home house, boolean isAlive) {
+    public Character(String name, String role, String gender, boolean isAlive) {
         super(name, gender);
         this.role = role;
-        this.house = house;
         this.isAlive = isAlive;
     }
 
     @Override
     public void printInfo() {
-        System.out.println("I'm " + super.gender + " my name is " + super.name + ". I'm " + house);
+        System.out.println("I'm a " + super.gender + " my name is " + super.name);
     }
 
     public String getRole() {
@@ -25,14 +23,6 @@ public class Character extends Person implements Actions {
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public Home getHouse() {
-        return house;
-    }
-
-    public void setHouse(Home house) {
-        this.house = house;
     }
 
     public boolean isAlive() {

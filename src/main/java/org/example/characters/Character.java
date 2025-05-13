@@ -1,6 +1,8 @@
 package org.example.characters;
 
-public class Character extends Person {
+import org.example.interfaces.Actions;
+
+public class Character extends Person implements Actions {
     private String role;
     private Home house;
     private boolean isAlive;
@@ -39,5 +41,20 @@ public class Character extends Person {
 
     public void setAlive(boolean alive) {
         isAlive = alive;
+    }
+
+    @Override
+    public void cry() {
+        System.out.println("I cry non-stop");
+    }
+
+    @Override
+    public void laugh() {
+        System.out.println("I laugh non-stop");
+    }
+
+    @Override
+    public void die() {
+        System.out.println("I am dying");
     }
 }
